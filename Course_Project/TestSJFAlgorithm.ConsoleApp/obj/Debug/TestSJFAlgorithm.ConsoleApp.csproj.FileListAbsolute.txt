@@ -1,0 +1,10 @@
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\bin\Debug\TestSJFAlgorithm.ConsoleApp.exe.config
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\bin\Debug\TestSJFAlgorithm.ConsoleApp.exe
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\bin\Debug\TestSJFAlgorithm.ConsoleApp.pdb
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\obj\Debug\TestSJFAlgorithm.ConsoleApp.csproj.CoreCompileInputs.cache
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\obj\Debug\TestSJFAlgorithm.ConsoleApp.exe
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\obj\Debug\TestSJFAlgorithm.ConsoleApp.pdb
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\bin\Debug\Model.dll
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\bin\Debug\Model.pdb
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\obj\Debug\TestSJFAlgorithm.ConsoleApp.csprojAssemblyReference.cache
+D:\C#\Course_Project\TestSJFAlgorithm.ConsoleApp\obj\Debug\TestSJFAlgorithm.ConsoleApp.csproj.CopyComplete

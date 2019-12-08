@@ -1,0 +1,6 @@
+D:\C#\Course_Project\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\C#\Course_Project\Model\bin\Debug\Model.dll
+D:\C#\Course_Project\Model\bin\Debug\Model.pdb
+D:\C#\Course_Project\Model\obj\Debug\Model.dll
+D:\C#\Course_Project\Model\obj\Debug\Model.pdb
+D:\C#\Course_Project\Model\obj\Debug\Model.csprojAssemblyReference.cache
