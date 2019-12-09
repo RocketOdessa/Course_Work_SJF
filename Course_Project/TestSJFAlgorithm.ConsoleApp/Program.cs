@@ -31,25 +31,25 @@ namespace TestSJFAlgorithm.ConsoleApp
 
             ClockGenerator clock = new ClockGenerator(callback, timer);
             SJFScheduler sjf = new SJFScheduler(processes);
-            var runTasks = sjf.StartConvertToRunningOPeration();
-            var resTask = sjf.Start();
+            //var runTasks = sjf.StartConvertToRunningOperation(token);
+            //var resTask = sjf.Start(token);
 
 
             //nonpreemptive imitation
             Thread.Sleep(500);
             sjf.AddProcess(new ProcessDomain { ProcessName = "p3", ProcessID = 8, State = ProcessState.New, Priority = ProcessPriority.Normal });
 
-            resTask.Wait();
+            //resTask.Wait();
 
-            if (resTask.IsCompleted)
-            {
-                foreach (var res in resTask.Result)
-                {
-                    Console.WriteLine(res);
-                }
-            }
-            clock.Stop();
-            Console.Read();
+            //if (resTask.IsCompleted)
+            //{
+            //    foreach (var res in resTask.Result)
+            //    {
+            //        Console.WriteLine(res);
+            //    }
+            //}
+            //clock.Stop();
+            //Console.Read();
         }
 
         public static IEnumerable<String> GetAllProcess(List<ProcessDomain> processes)

@@ -29,6 +29,7 @@ namespace Model.TaskScheduler.Scheduler
 
         public void AddProcess(ProcessDomain process)
         {
+            workDone = false;
             if (workDone == false)
             {
                 lock (SJFLock)
@@ -43,52 +44,42 @@ namespace Model.TaskScheduler.Scheduler
             get => processes;
         }
 
-        public async Task<List<ProcessDomain>> StartConvertToRunningOPeration()
+        public async Task<List<ProcessDomain>> StartConvertToRunningOperation(CancellationToken Token)
         {
-            CancellationTokenSource source = new CancellationTokenSource();
-            CancellationToken token = source.Token;
-            return await Task.Run(() => WorkWithRunningList(token));
+            return await WorkWithRunningList(Token);
         }
 
-        public async Task<List<ProcessDomain>> Start()
+        public async Task<List<ProcessDomain>> Start(CancellationToken Token)
         {
-            CancellationTokenSource source = new CancellationTokenSource();
-            CancellationToken token = source.Token;
-            return await Task.Run(() => Work(token));
+            return await Work(Token);
         }
 
-        private List<ProcessDomain> Work(CancellationToken ct)
+        private async Task<List<ProcessDomain>> Work(CancellationToken ct)
         {
             List<ProcessDomain> workResult = new List<ProcessDomain>();
 
-            while (runningProcess.Exists(p => p.State == ProcessState.Running))
+            while (runningProcess.Exists(p => p.State == ProcessState.Running) && !ct.IsCancellationRequested)
             {
                 ProcessDomain execProc = null;
                 lock (SJFLock)
                 {
-                    if (ct.IsCancellationRequested)
-                    {
-                        ct.ThrowIfCancellationRequested();
-                        execProc.State = ProcessState.Interrupted;
-                        workResult.Add(execProc);
-                    }
-                    else
-                    {
-                        int minDuration = runningProcess.Where(proc => proc.State == ProcessState.Running).Min(p => p.Burst_Time);
-                        execProc = runningProcess.First(p => p.Burst_Time == minDuration && p.State == ProcessState.Running);
-                        execProc.State = ProcessState.Completed;
-                        workResult.Add(execProc);
-                    }
+
+                    int minDuration = runningProcess.Where(proc => proc.State == ProcessState.Running).Min(p => p.Burst_Time);
+                    execProc = runningProcess.First(p => p.Burst_Time == minDuration && p.State == ProcessState.Running);
+                    execProc.State = ProcessState.Completed;
+                    workResult.Add(execProc);
+
                 }
 
                 //for work imitation
                 Thread.Sleep(execProc.Burst_Time * 1000);
             }
+
             workDone = true;
             return workResult;
         }
 
-        private List<ProcessDomain> WorkWithRunningList(CancellationToken ct)
+        private async Task<List<ProcessDomain>> WorkWithRunningList(CancellationToken ct)
         {
             foreach (var item in processes)
             {
@@ -99,6 +90,7 @@ namespace Model.TaskScheduler.Scheduler
                 else if (processes.Exists(proc => proc.State == ProcessState.Completed))
                     item.State = ProcessState.New;
             }
+
 
             while (processes.Exists(procRun => procRun.State == ProcessState.New))
             {

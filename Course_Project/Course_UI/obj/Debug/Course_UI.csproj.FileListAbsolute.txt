@@ -11,3 +11,16 @@ D:\C#\Course_Project\Course_UI\obj\Debug\Course_UI.Form1.resources
 D:\C#\Course_Project\Course_UI\bin\Debug\Model.dll
 D:\C#\Course_Project\Course_UI\bin\Debug\Model.pdb
 D:\C#\Course_Project\Course_UI\obj\Debug\Course_UI.csproj.CopyComplete
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\bin\Debug\Course_UI.exe.config
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\bin\Debug\Course_UI.exe
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\bin\Debug\Course_UI.pdb
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\bin\Debug\Model.dll
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\bin\Debug\Model.pdb
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.csprojAssemblyReference.cache
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.Form1.resources
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.Properties.Resources.resources
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.csproj.GenerateResource.cache
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.csproj.CoreCompileInputs.cache
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.csproj.CopyComplete
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.exe
+D:\C#\Course_Work_SJF\Course_Project\Course_UI\obj\Debug\Course_UI.pdb
