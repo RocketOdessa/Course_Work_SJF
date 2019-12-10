@@ -49,9 +49,11 @@
     <Compile Include="TaskScheduler\Scheduler\SJFScheduler.cs" />
     <Compile Include="Utility\SimpleRandomGenerator.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Compile Include="Utility\Priority\Priority.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
